@@ -1,5 +1,5 @@
 ---
-title: "Privacy Policy"
+title: "Privacy Policy — Photo Diary Companion"
 description: "Photo Diary Companion collects no personal data: it talks only to the Photo Diary servers you pair it with, and todo pins never leave the phone."
 ---
 

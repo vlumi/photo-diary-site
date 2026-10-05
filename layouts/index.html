@@ -1,68 +1,72 @@
 {{ define "main" }}
   <section class="hero">
     <img class="hero-icon" src="/appicon.png" width="128" height="128"
-         alt="Photo Diary Companion app icon: the sun on the horizon, framed like a lens">
-
-    <h1 class="hero-title">Photo Diary Companion</h1>
+         alt="Photo Diary icon: the sun on the horizon, framed like a lens">
+    <h1 class="hero-title">Photo Diary</h1>
     <p class="hero-tagline">{{ .Site.Params.tagline }}</p>
     <p class="hero-lede">
-      The iPhone companion for <a href="{{ .Site.Params.serverURL }}">Photo Diary</a>, the photo
-      journal you run on your own server, where photos are kept by the day they were taken and
-      where they were taken. The site is where you upload and edit. This app is what you carry.
+      A photo gallery you run on your own server, arranged by the day each photo
+      was taken: made for diaries and other date-based photography projects. The
+      site is where photos are uploaded, kept and shown; the iPhone companion
+      carries them, on the map and by date, wherever you go.
     </p>
-    {{ with .Site.Params.appStoreURL }}
-      <a class="appstore-badge" href="{{ . }}"><img src="/img/app-store-badge.svg" alt="Download on the App Store" width="150" height="50"></a>
-    {{ else }}
-      <p class="hero-soon">Coming to the App Store for iPhone.</p>
-    {{ end }}
+    <p class="hero-soon">See it live: <a href="https://dailybw.misaki.fi">dailybw.misaki.fi</a> · <a href="https://papusama.misaki.fi">papusama.misaki.fi</a></p>
   </section>
 
-  <section class="features">
-    <div class="feature">
-      <h2>Every photo on the map</h2>
-      <p>Every geotagged photo as a pin, piled up by zoom so a city's worth stays
-      readable. Tap a pin for its thumbnails, tap again for the photo. Follow your
-      location as you walk and find what you shot around the corner years ago.</p>
+  <section class="part">
+    <h2>The site</h2>
+    <p class="lede">Self-hosted and open source. Your photos, on your server, under your
+    rules.</p>
+    <div class="features">
+      <div class="feature">
+        <h2>A calendar of photos</h2>
+        <p>Year, month and photo views: a heat-mapped calendar, thumbnails grouped by
+        day, and each photo full screen with its date, place, camera and settings.</p>
+      </div>
+      <div class="feature">
+        <h2>On the map</h2>
+        <p>Every photo with a location on a map, scoped to whatever you're looking at;
+        places named in the visitor's language. A gallery can keep its locations to
+        itself.</p>
+      </div>
+      <div class="feature">
+        <h2>Statistics</h2>
+        <p>Time, place, gear, exposure, light: what the diary is made of, with charts
+        of how it changed over the years.</p>
+      </div>
+      <div class="feature">
+        <h2>Filters that keep up</h2>
+        <p>By camera, lens, place, date or any range of settings, applied to the
+        calendar and the statistics at once, and fast enough to toggle freely.</p>
+      </div>
+      <div class="feature">
+        <h2>Galleries and access</h2>
+        <p>One photo in any number of galleries, galleries made of others or of a saved
+        filter, and access per user, group or guest. One host can serve several
+        galleries under their own names.</p>
+      </div>
+      <div class="feature">
+        <h2>Made to be lived with</h2>
+        <p>English, Finnish and Japanese, eighteen themes, an admin UI for galleries,
+        users and photo edits, and upgrades that swap code without touching your
+        photos.</p>
+      </div>
     </div>
-    <div class="feature">
-      <h2>The diary by date</h2>
-      <p>Gallery, year, month, and the month's photos by day, the way the diary was
-      written. From any photo, jump to its place on the map, or from the map to its
-      day in the calendar, among the photos taken around it.</p>
-    </div>
-    <div class="feature">
-      <h2>Pins for places to go back to</h2>
-      <p>Touch and hold the map to drop a todo pin: a note, a star, and a quick
-      snapshot of the place if you like. List them nearest first. They stay on your
-      phone and are never sent anywhere, not even to your own server.</p>
-    </div>
-    <div class="feature">
-      <h2>Pairing, not passwords</h2>
-      <p>On your Photo Diary site, <em>Pair a device</em> shows a QR code and a link.
-      Scan it or tap it, and the app is in; it never asks for a username or password.
-      Pair as many servers as you like, and open one gallery or all of them.</p>
-    </div>
-    <div class="feature">
-      <h2>Fast, and fine offline</h2>
-      <p>The last answer from each server is kept on the phone and shown at once, then
-      refreshed. No signal on the trail still means a map full of photos.</p>
-    </div>
-    <div class="feature">
-      <h2>Yours, end to end</h2>
-      <p>The app talks to the servers you pair it with and to nothing of ours: no
-      analytics, no ads, no accounts. A built-in demo shows the app before you pair
-      anything. English and Japanese.</p>
-    </div>
+    <p class="cta"><a href="{{ .Site.Params.setupURL }}">Run your own</a> · <a href="{{ .Site.Params.serverRepoURL }}">Code on GitHub</a></p>
+  </section>
+
+  <section class="part">
+    <h2>The iPhone app</h2>
+    <p class="lede"><strong>Photo Diary Companion</strong> puts your Photo Diary in your
+    pocket: every photo on the map, the diary by date, and pins for the places you want
+    to go back to. Paired with a scan, never a password.</p>
+    <p class="cta"><a href="/app/">About the app</a>{{ with .Site.Params.appStoreURL }} · <a href="{{ . }}">App Store</a>{{ end }}</p>
   </section>
 
   <section class="closing">
-    <p>Free. No ads, no accounts, no tracking.</p>
-    <p class="fine">Needs a <a href="{{ .Site.Params.serverURL }}">Photo Diary server</a>, version 1.0.7 or later, with an account on it.</p>
-    {{ with .Site.Params.githubURL }}
-      <p class="fine">Open source — <a href="{{ . }}">code on GitHub</a>.</p>
-    {{ end }}
+    <p>Free and open source. No ads, no accounts of ours, no tracking.</p>
     {{ with .Site.Params.sponsorURL }}
-      <p class="fine">Free, no ads — <a href="{{ . }}">sponsor the developer</a> if you like it.</p>
+      <p class="fine"><a href="{{ . }}">Sponsor the developer</a> if you like it.</p>
     {{ end }}
   </section>
 {{ end }}

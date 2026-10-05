@@ -1,21 +1,28 @@
 ---
 title: "Support"
-description: "Help, questions and bug reports for Photo Diary Companion."
+description: "Help, questions and bug reports for Photo Diary and its iPhone app."
 ---
 
 Need a hand, found a bug, or have an idea? Here's how to reach it.
 
 ## Report a bug or request a feature
 
-Photo Diary Companion is developed in the open. The best place for bugs and
-requests is the issue tracker:
+Both halves are developed in the open, each with its own issue tracker:
 
-- [Open an issue on GitHub](https://github.com/vlumi/photo-diary-ios/issues)
+- **The site** (the server, its web UI, setup): [Photo Diary issues](https://github.com/vlumi/photo-diary/issues)
+- **The iPhone app**: [Photo Diary Companion issues](https://github.com/vlumi/photo-diary-ios/issues)
 
-Please say which iPhone and iOS version, which version of Photo Diary your
-server runs, and what you did. Email works too: <ville@misaki.fi>.
+Please say what you did, which version of Photo Diary the server runs, and for
+the app, which iPhone and iOS version. Email works too: <ville@misaki.fi>.
 
-## Common questions
+## Running a site
+
+[SETUP.md](https://github.com/vlumi/photo-diary/blob/main/SETUP.md) covers
+installing Photo Diary, from a single personal instance to several on one host,
+with upgrades and day-to-day operation. It needs Node.js 22 or newer and runs
+behind nginx.
+
+## The iPhone app
 
 **Do I need my own server?**
 To see your own photos, yes: the app is a companion for
