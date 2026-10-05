@@ -1,0 +1,68 @@
+{{ define "main" }}
+  <section class="hero">
+    <img class="hero-icon" src="/appicon.png" width="128" height="128"
+         alt="Photo Diary Companion app icon: the sun on the horizon, framed like a lens">
+
+    <h1 class="hero-title">Photo Diary Companion</h1>
+    <p class="hero-tagline">{{ .Site.Params.tagline }}</p>
+    <p class="hero-lede">
+      The iPhone companion for <a href="{{ .Site.Params.serverURL }}">Photo Diary</a>, the photo
+      journal you run on your own server, where photos are kept by the day they were taken and
+      where they were taken. The site is where you upload and edit. This app is what you carry.
+    </p>
+    {{ with .Site.Params.appStoreURL }}
+      <a class="appstore-badge" href="{{ . }}"><img src="/img/app-store-badge.svg" alt="Download on the App Store" width="150" height="50"></a>
+    {{ else }}
+      <p class="hero-soon">Coming to the App Store for iPhone.</p>
+    {{ end }}
+  </section>
+
+  <section class="features">
+    <div class="feature">
+      <h2>Every photo on the map</h2>
+      <p>Every geotagged photo as a pin, piled up by zoom so a city's worth stays
+      readable. Tap a pin for its thumbnails, tap again for the photo. Follow your
+      location as you walk and find what you shot around the corner years ago.</p>
+    </div>
+    <div class="feature">
+      <h2>The diary by date</h2>
+      <p>Gallery, year, month, and the month's photos by day, the way the diary was
+      written. From any photo, jump to its place on the map, or from the map to its
+      day in the calendar, among the photos taken around it.</p>
+    </div>
+    <div class="feature">
+      <h2>Pins for places to go back to</h2>
+      <p>Touch and hold the map to drop a todo pin: a note, a star, and a quick
+      snapshot of the place if you like. List them nearest first. They stay on your
+      phone and are never sent anywhere, not even to your own server.</p>
+    </div>
+    <div class="feature">
+      <h2>Pairing, not passwords</h2>
+      <p>On your Photo Diary site, <em>Pair a device</em> shows a QR code and a link.
+      Scan it or tap it, and the app is in; it never asks for a username or password.
+      Pair as many servers as you like, and open one gallery or all of them.</p>
+    </div>
+    <div class="feature">
+      <h2>Fast, and fine offline</h2>
+      <p>The last answer from each server is kept on the phone and shown at once, then
+      refreshed. No signal on the trail still means a map full of photos.</p>
+    </div>
+    <div class="feature">
+      <h2>Yours, end to end</h2>
+      <p>The app talks to the servers you pair it with and to nothing of ours: no
+      analytics, no ads, no accounts. A built-in demo shows the app before you pair
+      anything. English and Japanese.</p>
+    </div>
+  </section>
+
+  <section class="closing">
+    <p>Free. No ads, no accounts, no tracking.</p>
+    <p class="fine">Needs a <a href="{{ .Site.Params.serverURL }}">Photo Diary server</a>, version 1.0.7 or later, with an account on it.</p>
+    {{ with .Site.Params.githubURL }}
+      <p class="fine">Open source — <a href="{{ . }}">code on GitHub</a>.</p>
+    {{ end }}
+    {{ with .Site.Params.sponsorURL }}
+      <p class="fine">Free, no ads — <a href="{{ . }}">sponsor the developer</a> if you like it.</p>
+    {{ end }}
+  </section>
+{{ end }}
