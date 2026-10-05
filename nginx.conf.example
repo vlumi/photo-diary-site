@@ -7,14 +7,14 @@
 #
 # `root` points at the web root ITSELF — deploy.sh builds straight into it
 # (--cleanDestinationDir), there is no `public/` subdir. Keep this in step with
-# WEBROOT in deploy.sh (default /var/www/photodiary.misaki.fi).
+# WEBROOT in deploy.sh (default /var/www/photodiary).
 
 server {
     listen 80;
     listen [::]:80;
     server_name photodiary.misaki.fi;
 
-    root /var/www/photodiary.misaki.fi;
+    root /var/www/photodiary;
     index index.html;
 
     # Hugo builds 404.html at the web root.
