@@ -184,3 +184,11 @@ body {
   }
   .hero-icon { box-shadow: 0 10px 30px rgba(0, 0, 0, .5); }
 }
+
+/* ---- the home page's two parts: the site, the app ---- */
+.part { padding: 2.5rem 0 1.5rem; border-bottom: 1px solid var(--line); }
+.part > h2 { text-align: center; font-size: 1.7rem; color: var(--accent); margin: 0 0 .5rem; }
+.part > .lede { text-align: center; max-width: 42rem; margin: 0 auto 1.75rem; color: var(--ink-soft); }
+.part .cta { text-align: center; font-weight: 700; margin: 1.75rem 0 .5rem; }
+.part a, .hero-lede a { color: var(--accent); }
+.part .feature a { color: var(--accent); }
