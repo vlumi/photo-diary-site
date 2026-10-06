@@ -10,8 +10,7 @@ disableKinds:
 
 params:
   tagline: "A self-hosted photo journal, by date and on the map."
-  # Empty until the App Store listing is live; the badge hides itself meanwhile.
-  appStoreURL: ""
+  appStoreURL: "https://apps.apple.com/app/id6808160193"
   supportEmail: "ville@misaki.fi"
   serverRepoURL: "https://github.com/vlumi/photo-diary"
   setupURL: "https://github.com/vlumi/photo-diary/blob/main/SETUP.md"
